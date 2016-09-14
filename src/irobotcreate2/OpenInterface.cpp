@@ -165,7 +165,7 @@ int irobot::OpenInterface::closeSerialPort()
 int irobot::OpenInterface::sendOpcode(OI_Opcode code)
 {
 	uint8_t to_send = code;
-	std::cout<<"Sending OPCode: "<<(uint8_t)to_send<<std::endl;
+	std::cout<<"Sending OPCode: "<<(int)to_send<<std::endl;
 	try{ serial_port_.write(&to_send, 1); }
 	catch(std::exception& e){
         std::cerr<<e.what()<<std::endl;
